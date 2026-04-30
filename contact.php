@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OVO</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/form.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trashbank</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="p-4">
+<body>
+
 <nav class="nav-full">
     <div class="logo-web">
         <ul>
@@ -33,16 +33,19 @@
     </div>
 </nav>
 
-    <h1>OVO 20.000</h1>
+<!-- SECTION CONTACT -->
+<section id="contact" class="contact-section">
 
-    <form action="landingpoin.php?id=4" method="POST">
-        <div class="mb-3">
-            <label class="form-label">Nomor</label>
-            <input type="number" class="form-control" name="nomor" placeholder="Masukkan nomor yang akan diisi saldo ovo" required>
-        </div>
+    <h3 class="section-title">Contact Us</h3>
+    <p class="text-center">Hubungi kami untuk informasi dan layanan Trashbank</p>
 
-        <button type="submit" class="btn btn-success">Redeem</button>
-    </form>
+    <div class="contact-box">
+        <p><strong>Email:</strong> trashbank@gmail.com</p>
+        <p><strong>WhatsApp:</strong> 0812-3456-7890</p>
+        <p><strong>Instagram:</strong> @trashbank.id</p>
+        <p><strong>Alamat:</strong> Jl. Lingkungan Bersih No.10</p>
+    </div>
 
+</section>
 </body>
 </html>

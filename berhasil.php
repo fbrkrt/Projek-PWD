@@ -33,8 +33,8 @@ if (!isset($_SESSION['nama'])) {
                 <li><a href="index.php" class="garis-bawah">Home</a></li> 
                 <li><a href="regis.php" class="garis-bawah">Registrasi</a></li> 
                 <li><a href="tukar.php" class="garis-bawah">Rewards</a></li> 
-                <li><a href="#categories" class="garis-bawah">Categories</a></li> 
-                <li><a href="#" class="garis-bawah">Contact</a></li> 
+                <li><a href="index.php?#categories" class="garis-bawah">Categories</a></li> 
+                <li><a href="contact.php" class="garis-bawah">Contact</a></li> 
             </ul>
         </div>
 
@@ -45,7 +45,7 @@ if (!isset($_SESSION['nama'])) {
 
     <div class="card text-center">
         <div class="card-header">
-            LOGIN SUCCESFUL
+            LOGIN SUCCESFUL✅
         </div>
         <div class="card-body">
             <h2 class="card-title">Selamat datang di trashbank <?= $_SESSION['nama']; ?></h2>

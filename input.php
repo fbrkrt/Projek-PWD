@@ -29,8 +29,8 @@ if(!isset($_SESSION['email'])){
                 <li><a href="index.php">Home</a></li> 
                 <li><a href="regis.php">Registrasi</a></li> 
                 <li><a href="tukar.php">Rewards</a></li> 
-                <li><a href="#categories">Categories</a></li> 
-                <li><a href="#">Contact</a></li> 
+                <li><a href="index.php?#categories">Categories</a></li> 
+                <li><a href="contact.php">Contact</a></li> 
             </ul>
         </div>
 

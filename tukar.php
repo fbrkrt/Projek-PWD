@@ -46,8 +46,8 @@ $result = mysqli_query($conn, $query);
                 <li><a href="index.php" class="garis-bawah">Home</a></li> 
                 <li><a href="register.php" class="garis-bawah">Registrasi</a></li> 
                 <li><a href="tukar.php" class="garis-bawah">Rewards</a></li> 
-                <li><a href="#categories" class="garis-bawah">Categories</a></li> 
-                <li><a href="#" class="garis-bawah">Contact</a></li> 
+                <li><a href="index.php?#categories" class="garis-bawah">Categories</a></li> 
+                <li><a href="contact.php" class="garis-bawah">Contact</a></li> 
             </ul>
         </div>
 
@@ -66,7 +66,7 @@ $result = mysqli_query($conn, $query);
                 <div class="card-body">
                     <h5 class="card-title"><?= $row['nama_hadiah'] ?></h5>
                     <h5 class="card-title">Poin <?= $row['poin'] ?></h5>
-                    <a href="proses/prosesredeem.php?id=<?= $row['id_hadiah'] ?>" class="btn btn-primary">REDEEM NOW!</a>
+                    <a href="prosesreedem.php?id=<?= $row['id_hadiah'] ?>" class="btn btn-primary">REDEEM NOW!</a>
                 </div>
             </div>
         <?php } ?>

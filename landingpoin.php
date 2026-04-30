@@ -56,8 +56,8 @@ $poin_user = $user['total']; // sisa poin terbaru
                 <li><a href="index.php" class="garis-bawah">Home</a></li> 
                 <li><a href="register.php" class="garis-bawah">Registrasi</a></li> 
                 <li><a href="tukar.php" class="garis-bawah">Rewards</a></li> 
-                <li><a href="#categories" class="garis-bawah">Categories</a></li> 
-                <li><a href="#" class="garis-bawah">Contact</a></li> 
+                <li><a href="index.php?#categories" class="garis-bawah">Categories</a></li> 
+                <li><a href="contact.php" class="garis-bawah">Contact</a></li> 
             </ul>
         </div>
 
@@ -73,7 +73,7 @@ $poin_user = $user['total']; // sisa poin terbaru
     <p>Sisa poin kamu: <b><?php echo $poin_user - $poin_hadiah; ?></b></p>
 
     <a href="tukar.php" class="btn btn-secondary">Mau Tukar Lagi</a>
-    <a href="home.php" class="btn btn-secondary">Kembali ke Home</a>
+    <a href="index.php" class="btn btn-secondary">Kembali ke Home</a>
 </div>
 
 </body>

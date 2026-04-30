@@ -10,6 +10,28 @@
 </head>
 
 <body class="p-4">
+<nav class="nav-full">
+    <div class="logo-web">
+        <ul>
+            <li><img src="./assets/logo.png" alt="logo bank sampah" style="width: 50px;"></li>
+            <li><a href="index.php">Trashbank</a></li>
+        </ul>
+    </div>
+
+    <div class="nav-container">
+        <ul>
+            <li><a href="index.php" class="garis-bawah">Home</a></li>
+            <li><a href="register.php" class="garis-bawah">Registrasi</a></li>
+            <li><a href="tukar.php" class="garis-bawah">Rewards</a></li>
+            <li><a href="index.php?#categories" class="garis-bawah">Categories</a></li>
+            <li><a href="contact.php" class="garis-bawah">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="get-started">
+        <a href="register.php">Get Started</a>
+    </div>
+</nav>
 
     <div class="card" style="width: 18rem;">
         <img src="../assets/voucher-gojek-jabodetabek-5.jpg" class="card-img-top" alt="foto voucher gojek">

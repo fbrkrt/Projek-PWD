@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trashbank</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Trashbank - Berhasil Setor Sampah</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
+<body class="landing-page">
     <nav class="nav-full">
         <div class="logo-web">
             <ul>
@@ -19,35 +19,58 @@
 
         <div class="nav-container">
             <ul>
-                <li><a href="index.php" class="garis-bawah">Home</a></li> 
-                <li><a href="regis.php" class="garis-bawah">Registrasi</a></li> 
-                <li><a href="tukar.php" class="garis-bawah">Rewards</a></li> 
-                <li><a href="#categories" class="garis-bawah">Categories</a></li> 
-                <li><a href="#" class="garis-bawah">Contact</a></li> 
+                <li><a href="index.php">Home</a></li> 
+                <li><a href="register.php">Registrasi</a></li> 
+                <li><a href="tukar.php">Rewards</a></li> 
+                <li><a href="index.php?#categories">Categories</a></li> 
+                <li><a href="contact.php">Contact</a></li> 
             </ul>
         </div>
 
         <div class="get-started">
-            <a href="form.php">Get Started</a>
+            <a href="register.php">Get Started</a>
         </div>
     </nav>
 
-    <section>
-                <?php
-        include 'koneksi.php';
-        
-        $data = mysqli_query($conn, "SELECT * FROM sampah ORDER BY id DESC LIMIT 1");
-        $row = mysqli_fetch_assoc($data);
-        session_start();
-        $nama = isset($_SESSION['nama']) ? $_SESSION['nama'] : "Pengguna";
-        ?>
+    <section class="success-landing">
+        <div class="success-card">
+            <div class="success-icon">
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-recycle"></i>
+                <i class="fas fa-tree"></i>
+            </div>
+            
+            <?php
+            include 'koneksi.php';
+            
+            $data = mysqli_query($conn, "SELECT * FROM sampah ORDER BY id DESC LIMIT 1");
+            $row = mysqli_fetch_assoc($data);
+            session_start();
+            $nama = isset($_SESSION['nama']) ? $_SESSION['nama'] : "Pengguna";
+            ?>
 
-<h1>Selamat, <?php echo $nama . ", kamu mendapat " . $row['poin'] . " poin"; ?>! 🎉</h1>
-  <p>Terima kasih sudah berkontribusi dalam merawat alam🌿</p>
-  <br>
-  <ul>
-    <li><a href="index.php" class="back-button">Back to Home</a></li>
-  </ul>
+            <h1>Selamat, <?php echo $nama; ?>! 🎉</h1>
+            
+            <div class="poin-box">
+                <span class="poin-label">Kamu mendapatkan</span>
+                <div class="poin-amount"><?php echo $row['poin']; ?> Poin</div>
+            </div>
+            
+            <p class="thanks-message">Terima kasih sudah berkontribusi dalam merawat alam 🌿</p>
+            <p class="eco-message">Setiap sampah yang kamu setor membantu menjaga bumi tetap hijau!</p>
+            
+            <div class="action-buttons">
+                <a href="index.php" class="btn-home">
+                    <i class="fas fa-home"></i> Kembali ke Home
+                </a>
+                <a href="tukar.php" class="btn-redeem">
+                    <i class="fas fa-gift"></i> Tukar Poin Sekarang
+                </a>
+                <a href="input.php" class="btn-deposit">
+                    <i class="fas fa-trash-alt"></i> Setor Lagi
+                </a>
+            </div>
+        </div>
     </section>
 </body>
 </html>
