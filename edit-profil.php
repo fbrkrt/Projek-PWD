@@ -1,6 +1,7 @@
 <?php
 session_start();
 include "koneksi.php";
+include "cek-cookie.php";
 
 if (!isset($_SESSION['email'])) {
     header("Location: login.php");
@@ -36,6 +37,8 @@ $user = mysqli_fetch_assoc($query);
                 <li><a href="tukar.php">Rewards</a></li>
                 <li><a href="index.php?#categories">Categories</a></li>
                 <li><a href="contact.php">Contact</a></li>
+                <li><a href="kelola-sampah.php" class="garis-bawah">Riwayat</a></li>
+                <li><a href="edit-profil.php" class="garis-bawah">Profil</a></li>
             </ul>
         </div>
         <div class="get-started">
@@ -45,7 +48,7 @@ $user = mysqli_fetch_assoc($query);
 
     <div class="container" style="margin-top: 100px;">
         <h1>Edit Profil</h1>
-        <form action="update_profil.php" method="POST">
+        <form action="update-profil.php" method="POST">
             <div class="mb-3">
                 <label for="nama" class="form-label">Nama Lengkap</label>
                 <input type="text" class="form-control" id="nama" name="nama" value="<?= htmlspecialchars($user['nama']) ?>" required>
@@ -69,7 +72,7 @@ $user = mysqli_fetch_assoc($query);
         
         <hr>
         <div class="text-center mt-3">
-            <a href="hapus_akun.php" class="btn btn-danger" onclick="return confirm('Yakin ingin menghapus akun? Semua data sampah Anda akan hilang!')">Hapus Akun</a>
+            <a href="hapus-akun.php" class="btn btn-danger" onclick="return confirm('Yakin ingin menghapus akun? Semua data sampah Anda akan hilang!')">Hapus Akun</a>
         </div>
     </div>
 </body>

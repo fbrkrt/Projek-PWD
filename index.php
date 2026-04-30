@@ -25,6 +25,8 @@
             <li><a href="tukar.php" class="garis-bawah">Rewards</a></li>
             <li><a href="#categories" class="garis-bawah">Categories</a></li>
             <li><a href="contact.php" class="garis-bawah">Contact</a></li>
+            <li><a href="kelola-sampah.php" class="garis-bawah">Riwayat</a></li>
+            <li><a href="edit-profil.php" class="garis-bawah">Profil</a></li>
         </ul>
     </div>
 

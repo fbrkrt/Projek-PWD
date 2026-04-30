@@ -28,7 +28,7 @@ if ($data) {
         mysqli_query($conn, "UPDATE user SET total = total - $poin WHERE email='$email'");
         
         mysqli_commit($conn);
-        echo "<script>alert('Data sampah berhasil dihapus!'); window.location='kelola_sampah.php';</script>";
+        echo "<script>alert('Data sampah berhasil dihapus!'); window.location='kelola-sampah.php';</script>";
         
     } catch (Exception $e) {
         mysqli_rollback($conn);

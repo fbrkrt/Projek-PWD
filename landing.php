@@ -1,3 +1,10 @@
+<?php
+session_start();
+include "cek-cookie.php";  // Tambahkan baris ini
+
+// Rest of your code...
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,6 +31,8 @@
                 <li><a href="tukar.php">Rewards</a></li> 
                 <li><a href="index.php?#categories">Categories</a></li> 
                 <li><a href="contact.php">Contact</a></li> 
+                <li><a href="kelola-sampah.php" class="garis-bawah">Riwayat</a></li>
+                <li><a href="edit-profil.php" class="garis-bawah">Profil</a></li>
             </ul>
         </div>
 

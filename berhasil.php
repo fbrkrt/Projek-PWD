@@ -1,5 +1,6 @@
 <?php
 session_start();
+include "cek-cookie.php";
 
 if (!isset($_SESSION['nama'])) {
     header("Location: login.php");

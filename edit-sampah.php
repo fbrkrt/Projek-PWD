@@ -1,6 +1,7 @@
 <?php
 session_start();
 include "koneksi.php";
+include "cek-cookie.php";
 
 if (!isset($_SESSION['email'])) {
     header("Location: login.php");
@@ -41,6 +42,8 @@ if (!$data) {
                 <li><a href="tukar.php">Rewards</a></li>
                 <li><a href="index.php?#categories">Categories</a></li>
                 <li><a href="contact.php">Contact</a></li>
+                <li><a href="kelola-sampah.php" class="garis-bawah">Riwayat</a></li>
+                <li><a href="edit-profil.php" class="garis-bawah">Profil</a></li>
             </ul>
         </div>
         <div class="get-started">
@@ -48,7 +51,7 @@ if (!$data) {
         </div>
     </nav>
 
-    <form action="update_sampah.php" method="POST" class="form-input" style="margin-top: 100px;">
+    <form action="update-sampah.php" method="POST" class="form-input" style="margin-top: 100px;">
         <div class="judul-form">
             <label>Edit Data Sampah</label>
             <label>Silakan ubah detail sampah</label>
@@ -127,7 +130,7 @@ if (!$data) {
 
         <div class="subres">
             <button type="submit" class="btn btn-primary">Update</button>
-            <a href="kelola_sampah.php" class="btn btn-secondary">Batal</a>
+            <a href="kelola-sampah.php" class="btn btn-secondary">Batal</a>
         </div>
     </form>
 

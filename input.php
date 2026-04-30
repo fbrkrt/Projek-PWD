@@ -1,5 +1,6 @@
 <?php
 session_start();
+include "cek-cookie.php";
 
 if(!isset($_SESSION['email'])){
     header("Location: login.php");
@@ -31,6 +32,8 @@ if(!isset($_SESSION['email'])){
                 <li><a href="tukar.php">Rewards</a></li> 
                 <li><a href="index.php?#categories">Categories</a></li> 
                 <li><a href="contact.php">Contact</a></li> 
+                <li><a href="kelola-sampah.php" class="garis-bawah">Riwayat</a></li>
+                <li><a href="edit-profil.php" class="garis-bawah">Profil</a></li>
             </ul>
         </div>
 

@@ -35,6 +35,8 @@ $query = mysqli_query($conn, "SELECT * FROM sampah WHERE email='$email' ORDER BY
                 <li><a href="tukar.php">Rewards</a></li>
                 <li><a href="index.php?#categories">Categories</a></li>
                 <li><a href="contact.php">Contact</a></li>
+                <li><a href="kelola-sampah.php" class="garis-bawah">Riwayat</a></li>
+                <li><a href="edit-profil.php" class="garis-bawah">Profil</a></li>
             </ul>
         </div>
         <div class="get-started">
@@ -69,8 +71,8 @@ $query = mysqli_query($conn, "SELECT * FROM sampah WHERE email='$email' ORDER BY
                         <td><?= $row['tanggal'] ?></td>
                         <td><?= $row['lokasi'] ?></td>
                         <td>
-                            <a href="edit_sampah.php?id=<?= $row['id'] ?>" class="btn btn-warning btn-sm">Edit</a>
-                            <a href="hapus_sampah.php?id=<?= $row['id'] ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus data sampah ini?')">Hapus</a>
+                            <a href="edit-sampah.php?id=<?= $row['id'] ?>" class="btn btn-warning btn-sm">Edit</a>
+                            <a href="hapus-sampah.php?id=<?= $row['id'] ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus data sampah ini?')">Hapus</a>
                         </td>
                     </tr>
                     <?php } ?>

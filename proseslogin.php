@@ -1,9 +1,11 @@
 <?php
 session_start();
 include "koneksi.php";
+include "cek-cookie.php";
 
 $email = $_POST['email'];
 $pass  = $_POST['pass'];
+$remember = isset($_POST['remember']) ? true : false;
 
 $query = mysqli_query($conn, "SELECT * FROM user WHERE email='$email'");
 
@@ -12,13 +14,25 @@ if(mysqli_num_rows($query) > 0){
 
     if(password_verify($pass, $data['password'])){
         $_SESSION['nama'] = $data['nama'];
-        $_SESSION['email'] = $data['email'];  // ← TAMBAHKAN BARIS INI
+        $_SESSION['email'] = $data['email'];
+        
+        // Jika Remember Me dicentang, buat cookie
+        if($remember){
+            // Cookie berlaku 30 hari (30 * 24 * 3600 detik)
+            setcookie('remember_email', $email, time() + (30 * 24 * 3600), "/");
+            setcookie('remember_password', $pass, time() + (30 * 24 * 3600), "/");
+        } else {
+            // Hapus cookie jika ada
+            setcookie('remember_email', '', time() - 3600, "/");
+            setcookie('remember_password', '', time() - 3600, "/");
+        }
+        
         header("Location: berhasil.php");
         exit;
     } else {
-        echo "Password salah!";
+        echo "<script>alert('Password salah!'); window.location='login.php';</script>";
     }
 } else {
-    echo "Email tidak ditemukan!";
+    echo "<script>alert('Email tidak ditemukan!'); window.location='login.php';</script>";
 }
 ?>
