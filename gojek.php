@@ -36,16 +36,12 @@
 </nav>
 
     <div class="card" style="width: 18rem;">
-        <img src="../assets/voucher-gojek-jabodetabek-5.jpg" class="card-img-top" alt="foto voucher gojek">
+        <img src="./assets/voucher-gojek.webp" class="card-img-top" alt="foto voucher gojek">
         <div class="card-body">
             <p class="card-text">Gunakan voucher ini untuk mendapatkan diskon goride 90%!</p>
             <p>TRASHBANKWITHGOJEK</p>
             <a href="landingpoin.php?id=8" class="btn btn-secondary">Gunakan Voucher</a>
         </div>
     </div>
-
-
-
 </body>
-
 </html>
