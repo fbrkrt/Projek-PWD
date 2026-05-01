@@ -1,6 +1,8 @@
 <?php
-session_start();
-include "cek-cookie.php";
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
 // Hapus semua session
 session_destroy();
 

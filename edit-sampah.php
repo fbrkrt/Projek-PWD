@@ -42,7 +42,7 @@ if (!$data) {
                 <li><a href="tukar.php">Rewards</a></li>
                 <li><a href="index.php?#categories">Categories</a></li>
                 <li><a href="contact.php">Contact</a></li>
-                <li><a href="kelola-sampah.php" class="garis-bawah">Riwayat</a></li>
+                <li><a href="kelola-sampah.php" class="garis-bawah">History</a></li>
                 <li><a href="edit-profil.php" class="garis-bawah">Profil</a></li>
             </ul>
         </div>

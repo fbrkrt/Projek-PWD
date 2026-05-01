@@ -25,7 +25,7 @@
             <li><a href="tukar.php" class="garis-bawah">Rewards</a></li>
             <li><a href="index.php?#categories" class="garis-bawah">Categories</a></li>
             <li><a href="contact.php" class="garis-bawah">Contact</a></li>
-            <li><a href="kelola-sampah.php" class="garis-bawah">Riwayat</a></li>
+            <li><a href="kelola-sampah.php" class="garis-bawah">History</a></li>
             <li><a href="edit-profil.php" class="garis-bawah">Profil</a></li>
         </ul>
     </div>
@@ -42,10 +42,10 @@
     <p class="text-center">Hubungi kami untuk informasi dan layanan Trashbank</p>
 
     <div class="contact-box">
-        <p><strong>Email:</strong> trashbank@gmail.com</p>
-        <p><strong>WhatsApp:</strong> 0812-3456-7890</p>
-        <p><strong>Instagram:</strong> @trashbank.id</p>
-        <p><strong>Alamat:</strong> Jl. Lingkungan Bersih No.10</p>
+        <p><strong>📧Email:</strong> trashbank@gmail.com</p>
+        <p><strong>💬WhatsApp:</strong> 0812-3456-7890</p>
+        <p><strong>📷Instagram:</strong> @trashbank.id</p>
+        <p><strong>📍Alamat:</strong> Jl. Lingkungan Bersih No.10</p>
     </div>
 
 </section>

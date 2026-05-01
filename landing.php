@@ -31,7 +31,7 @@ include "cek-cookie.php";  // Tambahkan baris ini
                 <li><a href="tukar.php">Rewards</a></li> 
                 <li><a href="index.php?#categories">Categories</a></li> 
                 <li><a href="contact.php">Contact</a></li> 
-                <li><a href="kelola-sampah.php" class="garis-bawah">Riwayat</a></li>
+                <li><a href="kelola-sampah.php" class="garis-bawah">History</a></li>
                 <li><a href="edit-profil.php" class="garis-bawah">Profil</a></li>
             </ul>
         </div>
@@ -54,7 +54,6 @@ include "cek-cookie.php";  // Tambahkan baris ini
             
             $data = mysqli_query($conn, "SELECT * FROM sampah ORDER BY id DESC LIMIT 1");
             $row = mysqli_fetch_assoc($data);
-            session_start();
             $nama = isset($_SESSION['nama']) ? $_SESSION['nama'] : "Pengguna";
             ?>
 

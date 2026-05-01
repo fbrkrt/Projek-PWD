@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 include "koneksi.php";
 include "cek-cookie.php";
 
@@ -8,7 +10,7 @@ if (!isset($_SESSION['email'])) {
     exit;
 }
 
-$email = $_SESSION['email'];
+$email = mysqli_real_escape_string($conn, $_SESSION['email']);
 $query = mysqli_query($conn, "SELECT * FROM user WHERE email='$email'");
 $user = mysqli_fetch_assoc($query);
 ?>
@@ -37,8 +39,8 @@ $user = mysqli_fetch_assoc($query);
                 <li><a href="tukar.php">Rewards</a></li>
                 <li><a href="index.php?#categories">Categories</a></li>
                 <li><a href="contact.php">Contact</a></li>
-                <li><a href="kelola-sampah.php" class="garis-bawah">Riwayat</a></li>
-                <li><a href="edit-profil.php" class="garis-bawah">Profil</a></li>
+                <li><a href="kelola-sampah.php">History</a></li>
+                <li><a href="edit-profil.php">Profil</a></li>
             </ul>
         </div>
         <div class="get-started">
@@ -46,8 +48,8 @@ $user = mysqli_fetch_assoc($query);
         </div>
     </nav>
 
-    <div class="container" style="margin-top: 100px;">
-        <h1>Edit Profil</h1>
+    <div class="container" style="margin-top: 100px; max-width: 500px;">
+        <h1 class="text-center mb-4">Edit Profil</h1>
         <form action="update-profil.php" method="POST">
             <div class="mb-3">
                 <label for="nama" class="form-label">Nama Lengkap</label>
@@ -55,8 +57,12 @@ $user = mysqli_fetch_assoc($query);
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">Email (tidak bisa diubah)</label>
-                <input type="email" class="form-control" id="email" value="<?= $user['email'] ?>" readonly disabled>
-                <input type="hidden" name="email" value="<?= $user['email'] ?>">
+                <input type="email" class="form-control" id="email" value="<?= htmlspecialchars($user['email']) ?>" readonly disabled>
+                <input type="hidden" name="email" value="<?= htmlspecialchars($user['email']) ?>">
+            </div>
+            <div class="mb-3">
+                <label for="total" class="form-label">Total Poin Saat Ini</label>
+                <input type="text" class="form-control" id="total" value="<?= number_format($user['total'] ?? 0) ?> Poin" readonly disabled>
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Password Baru (kosongkan jika tidak ingin mengubah)</label>
@@ -66,8 +72,10 @@ $user = mysqli_fetch_assoc($query);
                 <label for="confirm_password" class="form-label">Konfirmasi Password Baru</label>
                 <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="Konfirmasi password baru">
             </div>
-            <button type="submit" class="btn btn-success">Update Profil</button>
-            <a href="berhasil.php" class="btn btn-secondary">Batal</a>
+            <div class="text-center">
+                <button type="submit" class="btn btn-success">Update Profil</button>
+                <a href="berhasil.php" class="btn btn-secondary">Batal</a>
+            </div>
         </form>
         
         <hr>

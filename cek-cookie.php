@@ -1,6 +1,8 @@
 <?php
-// File ini bisa dipanggil di awal setiap halaman
-session_start();
+// Cek apakah session sudah dimulai
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 // Jika sudah login lewat session, skip
 if(isset($_SESSION['email'])){
@@ -11,7 +13,7 @@ if(isset($_SESSION['email'])){
 if(isset($_COOKIE['remember_email']) && isset($_COOKIE['remember_password'])){
     include "koneksi.php";
     
-    $email = $_COOKIE['remember_email'];
+    $email = mysqli_real_escape_string($conn, $_COOKIE['remember_email']);
     $password = $_COOKIE['remember_password'];
     
     $query = mysqli_query($conn, "SELECT * FROM user WHERE email='$email'");
