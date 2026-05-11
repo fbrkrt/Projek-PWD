@@ -37,7 +37,7 @@
 
     <h1>Pulsa 10.000</h1>
 
-    <form action="landingpoin.php?id=5"
+    <form action="landingpoin.php?id=10"
      method="POST">
         <div class="mb-3">
             <label class="form-label">Nomor</label>

@@ -40,7 +40,7 @@
         <div class="card-body">
             <p class="card-text">Gunakan voucher ini untuk mendapatkan diskon goride 90%!</p>
             <p>TRASHBANKWITHGOJEK</p>
-            <a href="landingpoin.php?id=8" class="btn btn-secondary">Gunakan Voucher</a>
+            <a href="landingpoin.php?id=33" class="btn btn-secondary">Gunakan Voucher</a>
         </div>
     </div>
 </body>

@@ -36,7 +36,7 @@
 </nav>
     <h1>E-Wallet 20.000</h1>
 
-    <form action="../landingpoin.php?id=7" method="POST">
+    <form action="landingpoin.php?id=12" method="POST">
         <div class="mb-3">
             <label class="form-label">Pilih E-wallet</label><br>
             <input type="checkbox" class="form-check-input" name="nama" value="dana"  >

@@ -44,7 +44,7 @@ $query = mysqli_query($conn, "SELECT * FROM sampah WHERE email='$email' ORDER BY
         </div>
     </nav>
 
-    <div class="container" style="margin-top: 100px;">
+    <div class="container" style="margin-top: 100px; width:1000px;">
         <h1>Riwayat Setor Sampah</h1>
         <a href="input.php" class="btn btn-success mb-3">+ Setor Sampah Baru</a>
         

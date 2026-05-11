@@ -37,7 +37,7 @@
 
     <h1>PULSA 5.000</h1>
 
-    <form action="landingpoin.php?id=3" method="POST">
+    <form action="landingpoin.php?id=7" method="POST">
         <div class="mb-3">
             <label class="form-label">Nomor</label>
             <input type="number" class="form-control" name="nomor" placeholder="Masukkan nomor yang akan diisi pulsa 5.000" required>

@@ -73,7 +73,7 @@ $poin_user = $user['total']; // sisa poin terbaru
     <h2>Selamat!</h2>
     <p>Kamu berhasil menukarkan <b><?php echo $nama_hadiah; ?></b></p>
     <p>Poin berhasil dipotong: <b><?php echo $poin_hadiah; ?></b></p>
-    <p>Sisa poin kamu: <b><?php echo $poin_user - $poin_hadiah; ?></b></p>
+    <p>Sisa poin kamu: <b><?php echo $poin_user; ?></b></p>
 
     <a href="tukar.php" class="btn btn-secondary">Mau Tukar Lagi</a>
     <a href="index.php" class="btn btn-secondary">Kembali ke Home</a>

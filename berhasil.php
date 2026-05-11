@@ -17,6 +17,7 @@ if (!isset($_SESSION['nama'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Berhasil Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -43,9 +44,10 @@ if (!isset($_SESSION['nama'])) {
         </div>
     </nav>
 
-    <div class="card text-center" style="margin-top: 100px; max-width: 600px; margin-left: auto; margin-right: auto;">
-        <div class="card-header bg-success text-white">
-            LOGIN SUCCESSFUL ✅
+    <div class="card text-center">
+        <div class="bg-succes">
+            <i class="fa-solid fa-user-check"></i>
+            LOGIN SUCCESSFUL 
         </div>
         <div class="card-body">
             <h2 class="card-title">Selamat datang di Trashbank <?= htmlspecialchars($_SESSION['nama']); ?></h2>
@@ -54,7 +56,7 @@ if (!isset($_SESSION['nama'])) {
                 <div class="col-md-6 mb-3">
                     <div class="card border-warning">
                         <div class="card-header">Input Sampah</div>
-                        <div class="card-body">
+                        <div class="card-body1">
                             <p class="card-text">Masukkan sampahmu sekarang dan tukarkan poinmu!</p>
                             <a href="input.php" class="btn btn-primary">Input Sampah Sekarang</a>
                         </div>
@@ -63,7 +65,7 @@ if (!isset($_SESSION['nama'])) {
                 <div class="col-md-6 mb-3">
                     <div class="card border-success">
                         <div class="card-header">Kembali ke Home</div>
-                        <div class="card-body">
+                        <div class="card-body2">
                             <p class="card-text">Kembali ke halaman utama dan lihat fitur lainnya</p>
                             <a href="index.php" class="btn btn-primary">Home</a>
                         </div>

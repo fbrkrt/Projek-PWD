@@ -37,7 +37,7 @@
 
     <h1>PAKET DATA 10GB</h1>
 
-    <form action="landingpoin.php?id=1" method="POST">
+    <form action="landingpoin.php?id=3" method="POST">
         <div class="mb-3">
             <label class="form-label">Nomor</label>
             <input type="number" class="form-control" name="nomor" placeholder="Masukkan nomor yang akan diisi paket data" required>

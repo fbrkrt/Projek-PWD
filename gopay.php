@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OVO</title>
+    <title>GOPAY</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -35,12 +35,12 @@
     </div>
 </nav>
 
-    <h1>OVO 20.000</h1>
+    <h1>GOPAY 200.000</h1>
 
-    <form action="landingpoin.php?id=8" method="POST">
+    <form action="landingpoin.php?id=5" method="POST">
         <div class="mb-3">
             <label class="form-label">Nomor</label>
-            <input type="number" class="form-control" name="nomor" placeholder="Masukkan nomor yang akan diisi saldo ovo" required>
+            <input type="number" class="form-control" name="nomor" placeholder="Masukkan nomor yang akan diisi saldo gopay" required>
         </div>
 
         <button type="submit" class="btn btn-success">Redeem</button>
