@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('../assets/bg-web-fixx.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+    }
+}
+
+/* ========== NAVIGATION BAR ========== */
+.nav-full {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #354024;
+    padding: 0.5rem 2rem;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap;
+}
+
+.logo-web ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.logo-web ul li a {
+    color: #E5D7C4;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-container ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.nav-container a {
+    position: relative;
+    color: #CFBB99;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+/* HOVER NAVBAR WARNA EMAS */
+.nav-container a:hover {
+    color: #FFD700;
+}
+
+.nav-container a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: #E5D7C4;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+/* GARIS BAWAH HOVER WARNA EMAS */
+.nav-container a:hover::after {
+    width: 100%;
+    background-color: #FFD700;
+}
+
+.get-started a {
+    background-color: #889063;
+    color: #E5D7C4;
+    padding: 8px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* BUTTON GET STARTED HOVER WARNA EMAS */
+.get-started a:hover {
+    background-color: #FFD700;
+    color: #354024;
+}
+
+/* ========== TUKAR PAGE ========== */
+.jumlah {
+    text-align: center;
+    padding: 2rem;
+    background: #354024;
+    margin: 100px 5% 2rem 5%;
+    border-radius: 20px;
+    color: #E5D7C4;
+}
+
+.jumlah h1 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.hadiah {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    padding: 2rem 5%;
+}
+
+.hadiah .card {
+    width: 280px;
+    text-align: center;
+    background: #CFBB99;
+}
+
+.hadiah .card-title {
+    color: #354024;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.hadiah .btn-primary {
+    background-color: #354024 !important;
+    border: none;
+    font-weight: 700;
+}
+
+/* ========== LANDING POIN ========== */
+.landing {
+    text-align: center;
+    padding: 3rem;
+    background: #CFBB99;
+    margin: 120px auto 3rem auto;
+    max-width: 600px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.landing h2 {
+    color: #354024;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.landing p {
+    color: #4C3D19;
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+}
+
+/* ========== FORM REDEEM ========== */
+body.p-4 {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('../assets/bg-web-fixx.png');
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 1rem 2rem !important;
+}
+
+body.p-4 h1 {
+    color: #E5D7C4;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+body.p-4 form {
+    background: #CFBB99;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 450px;
+}
+
+body.p-4 .btn-success {
+    background-color: #354024 !important;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* ========== LANDING SUCCESS PAGE ========== */
+body.landing-page {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('../assets/bg-web-fixx.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.success-landing {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 2rem 3rem 2rem;
+}
+
+.success-card {
+    background: rgba(207, 187, 153, 0.95);
+    border-radius: 30px;
+    padding: 3rem;
+    max-width: 650px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+    backdrop-filter: blur(5px);
+    border: 1px solid #889063;
+}
+
+.success-card h1 {
+    font-size: 2rem;
+    color: #354024;
+    margin-bottom: 1.5rem;
+}
+
+.poin-box {
+    background: #354024;
+    border-radius: 20px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.poin-label {
+    display: block;
+    color: #E5D7C4;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.poin-amount {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #FFD700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.btn-home, .btn-redeem, .btn-deposit {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-home {
+    background: #889063;
+    color: #E5D7C4;
+}
+
+.btn-home:hover {
+    background: #354024;
+    color: #FFD700;
+}
+
+.btn-redeem {
+    background: #FFD700;
+    color: #354024;
+}
+
+.btn-deposit {
+    background: #354024;
+    color: #E5D7C4;
+}

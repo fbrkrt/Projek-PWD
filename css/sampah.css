@@ -1,0 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('../assets/bg-web-fixx.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+    }
+}
+
+/* ========== NAVIGATION BAR ========== */
+.nav-full {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #354024;
+    padding: 0.5rem 2rem;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap;
+}
+
+.logo-web ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.logo-web ul li a {
+    color: #E5D7C4;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-container ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.nav-container a {
+    position: relative;
+    color: #CFBB99;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+/* HOVER NAVBAR WARNA EMAS */
+.nav-container a:hover {
+    color: #FFD700;
+}
+
+.nav-container a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: #E5D7C4;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+/* GARIS BAWAH HOVER WARNA EMAS */
+.nav-container a:hover::after {
+    width: 100%;
+    background-color: #FFD700;
+}
+
+.get-started a {
+    background-color: #889063;
+    color: #E5D7C4;
+    padding: 8px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* BUTTON GET STARTED HOVER WARNA EMAS */
+.get-started a:hover {
+    background-color: #FFD700;
+    color: #354024;
+}
+
+/* ========== FORM INPUT ========== */
+.body-input {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('../assets/bg-web-fixx.png');
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.form-input {
+    max-width: 700px;
+    margin: 100px auto 50px auto;
+    background-color: #CFBB99;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(76, 61, 25, 0.2);
+}
+
+.judul-form {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.judul-form label:first-child {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #354024;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.judul-form label:last-child {
+    font-size: 0.9rem;
+    color: #4C3D19;
+}
+
+.form-input .row {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.form-input .col-sm-2 {
+    width: 30%;
+    text-align: right;
+    padding-right: 1rem;
+}
+
+.form-input .col-sm-5 {
+    width: 65%;
+}
+
+.form-input .col-form-label {
+    color: #354024;
+    font-weight: 600;
+    margin-bottom: 0;
+    line-height: 38px;
+}
+
+/* INI YANG DIUBAH - SEMUA INPUT TEXT, NUMBER, EMAIL, SELECT JADI SAMA */
+.form-input input[type="text"],
+.form-input input[type="email"],
+.form-input input[type="number"],
+.form-input input[type="date"],
+.form-input select {
+    background-color: #E5D7C4 !important;
+    border: 2px solid #889063 !important;
+    border-radius: 10px !important;
+    padding: 8px 12px !important;
+    width: 100%;
+    color: #4C3D19 !important;
+}
+
+.form-input input:focus,
+.form-input select:focus {
+    outline: none;
+    border-color: #354024 !important;
+}
+
+.form-input select option {
+    background-color: #E5D7C4;
+    color: #4C3D19;
+}
+
+.option-form {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.option-form label {
+    color: #354024;
+    font-weight: 600;
+    width: 30%;
+    text-align: right;
+    padding-right: 1rem;
+}
+
+fieldset {
+    margin-bottom: 1rem;
+}
+
+fieldset .col-form-label {
+    width: 30%;
+    text-align: right;
+    padding-right: 1rem;
+    display: inline-block;
+}
+
+fieldset .col-sm-5 {
+    display: inline-block;
+    width: 65%;
+}
+
+.form-check {
+    margin-bottom: 0.5rem;
+}
+
+.form-check-input {
+    margin-right: 0.5rem;
+}
+
+.form-check-label {
+    color: #4C3D19;
+}
+
+.subres {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.btn-primary {
+    background-color: #354024 !important;
+    border: none !important;
+    padding: 10px 30px !important;
+    border-radius: 30px !important;
+    font-weight: bold !important;
+    color: #E5D7C4 !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #889063 !important;
+    transform: translateY(-2px);
+}
+
+/* ========== KONFIRMASI PAGE ========== */
+.card-info {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('../assets/bg-web-fixx.png');
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.card2 {
+    max-width: 500px;
+    margin: 40px 0 40px 40px; /* rata kiri */
+    background: #CFBB99;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.card2 .card-header {
+    background-color: #354024;
+    color: #E5D7C4;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.card2 .card-body {
+    padding: 1.5rem;
+    background-color: transparent;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #4C3D19;
+    background-color: transparent;
+}
+
+.table tr td {
+    padding: 10px;
+    border-bottom: 1px solid #889063;
+    background-color: transparent;
+}
+
+.table tr td:first-child {
+    font-weight: 600;
+    width: 35%;
+    color: #354024;
+}

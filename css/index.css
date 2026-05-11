@@ -1,0 +1,463 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('../assets/bg-web-fixx.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+    }
+}
+
+/* ========== NAVIGATION BAR ========== */
+.nav-full {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #354024;
+    padding: 0.5rem 2rem;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap;
+}
+
+.logo-web ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.logo-web ul li a {
+    color: #E5D7C4;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-container ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.nav-container a {
+    position: relative;
+    color: #CFBB99;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+/* HOVER NAVBAR WARNA EMAS */
+.nav-container a:hover {
+    color: #FFD700;
+}
+
+.nav-container a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: #E5D7C4;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+/* GARIS BAWAH HOVER WARNA EMAS */
+.nav-container a:hover::after {
+    width: 100%;
+    background-color: #FFD700;
+}
+
+.get-started a {
+    background-color: #889063;
+    color: #E5D7C4;
+    padding: 8px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* BUTTON GET STARTED HOVER WARNA EMAS */
+.get-started a:hover {
+    background-color: #FFD700;
+    color: #354024;
+}
+
+/* ========== HERO SECTION ========== */
+.awalan-web {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('../assets/bg-web-fixx.png');
+    background-size: cover;
+    background-position: center;
+    color: #ffff;
+    min-height: 585px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+    padding-top: 100px;
+}
+
+.awalan-web .text-index h1 {
+    font-size: 3rem;
+    color: #E5D7C4;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.awalan-web div a {
+    background-color: #354024;
+    color: #E5D7C4;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.awalan-web div a:hover {
+    background-color: #CFBB99;
+    color: #354024;
+}
+
+/* ========== CATEGORIES SECTION ========== */
+.categories {
+    padding: 6rem 2rem;
+    background: rgba(229, 215, 196, 0.9);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #4C3D19;
+    margin-bottom: 0.5rem;
+}
+
+.categories .text-center {
+    text-align: center;
+    color: #889063;
+    margin-bottom: 2rem;
+}
+
+.d-flex {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 280px;
+    background-color: #CFBB99;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(76, 61, 25, 0.2);
+    transition: transform 0.3s ease;
+    margin: 10px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1rem;
+    text-align: center;
+}
+
+.card-body h6 {
+    color: #354024;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-body p {
+    color: #4C3D19;
+    font-size: 0.8rem;
+}
+
+.btn-card {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #354024;
+    color: #E5D7C4;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.btn-card:hover {
+    background-color: #889063;
+    color: #354024;
+}
+
+/* ========== POPUP STYLES ========== */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.75);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: 0.3s ease;
+    z-index: 99999;
+}
+
+.popup:target {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.popup-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    cursor: default;
+}
+
+.popup-box {
+    position: relative;
+    width: 450px;
+    max-width: 90%;
+    background: #E5D7C4;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 100px auto;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    z-index: 2;
+    border: 1px solid #889063;
+}
+
+.popup-box .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #4C3D19;
+    text-decoration: none;
+    z-index: 3;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.popup-box .close:hover {
+    color: #e74c3c;
+}
+
+.popup-box h3 {
+    color: #354024;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.popup-box p {
+    color: #4C3D19;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ========== FOOTER SECTION ========== */
+.akhiran {
+    background-color: #354024;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.akhiran h3 {
+    color: #E5D7C4;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.akhiran > a {
+    background-color: #889063;
+    color: #E5D7C4;
+    padding: 10px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+.akhiran > a:hover {
+    background-color: #CFBB99;
+    color: #354024;
+}
+
+.akhir-container {
+    border-top: 1px solid rgba(229, 215, 196, 0.2);
+    padding-top: 1.5rem;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #CFBB99;
+}
+
+/* ========== CONTACT PAGE ========== */
+.contact-section {
+    padding: 8rem 2rem 5rem 2rem;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('../assets/bg-web-fixx.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-section .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #E5D7C4;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.contact-section .text-center {
+    text-align: center;
+    color: #CFBB99;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+.contact-box {
+    background: #CFBB99;
+    border-radius: 20px;
+    padding: 2.5rem;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    border: 1px solid #889063;
+}
+
+.contact-box:hover {
+    transform: translateY(-5px);
+}
+
+.contact-box p {
+    margin: 1.2rem 0;
+    padding: 0.8rem 1rem;
+    background: #E5D7C4;
+    border-radius: 12px;
+    color: #354024;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.contact-box p:hover {
+    background: #889063;
+    color: #E5D7C4;
+}
+
+.contact-box p strong {
+    font-weight: 700;
+    min-width: 100px;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    .nav-full {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.5rem;
+    }
+    
+    .nav-container ul {
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .awalan-web .text-index h1 {
+        font-size: 2rem;
+    }
+    
+    .form-input .row {
+        flex-direction: column;
+    }
+    
+    .form-input .col-sm-2,
+    .form-input .col-sm-5 {
+        width: 100%;
+        text-align: left;
+    }
+    
+    .option-form {
+        flex-direction: column;
+    }
+    
+    .option-form label,
+    .option-form select {
+        width: 100%;
+        text-align: left;
+    }
+    
+    .card.text {
+        margin: 100px 1rem 30px 1rem;
+    }
+    
+    .success-card {
+        padding: 2rem;
+        margin: 0 1rem;
+    }
+    
+    .poin-amount {
+        font-size: 2.5rem;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+}
